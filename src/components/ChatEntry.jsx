@@ -1,6 +1,6 @@
 import './ChatEntry.css';
 import TimeStamp from './TimeStamp';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 /* we need name of sender to be displayed above bubble
 text of the message to be placed inside bubble
 need timestamp of when the text was sent, slightly below body of message and still within the bubble 
@@ -27,10 +27,10 @@ const ChatEntry = (props) => {
   );
 };
 
-// ChatEntry.propTypes = {
-//   sender: PropTypes.string.isRequired,
-//   body: PropTypes.string.isRequired,
-//   timeStamp: PropTypes.string.isRequired
-// };
+ChatEntry.propTypes = {
+  sender: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  timeStamp: PropTypes.string.isRequired
+};
 
 export default ChatEntry;
