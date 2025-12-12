@@ -3,7 +3,7 @@ import TimeStamp from './TimeStamp';
 import PropTypes from 'prop-types';
 /* we need name of sender to be displayed above bubble
 text of the message to be placed inside bubble
-need timestamp of when the text was sent, slightly below body of message and still within the bubble 
+need timestamp of when the text was sent, slightly below body of message and still within the bubble
 the like button is included here
 data needed:
     "sender":"Estragon",
