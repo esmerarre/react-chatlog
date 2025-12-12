@@ -10,7 +10,6 @@ data needed:
     "body":"Because you are wrong.",
     "timeStamp":"2018-05-29T22:49:33+00:00",
     "liked": false
-
 */
 
 const ChatEntry = (props) => {
