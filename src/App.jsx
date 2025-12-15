@@ -16,7 +16,7 @@ const countTotalLikes = entriesData => {
 const App = () => {
   const [entryData, setEntriesData] = useState(entriesData);
 
-  const handleLikes = id => {
+  function handleLikes(id) {
     setEntriesData(entryData => {
       return entryData.map(entry => {
         if (entry.id === id) {
@@ -31,12 +31,12 @@ const App = () => {
     <div id="App">
       <header>
         <h1>Application title</h1>
-        <h2>Total Likes: {countTotalLikes(entriesData)}</h2>
+        <h2>{countTotalLikes(entryData)} ❤️s</h2>
       </header>
       <main>
         {/* Wave 01: Render one ChatEntry component
         Wave 02: Render ChatLog component */}
-        <ChatLog entries={entriesData} onLike={handleLikes}></ChatLog>
+        <ChatLog entries={entryData} onLikeEntry={handleLikes}></ChatLog>
       </main>
     </div>
   );

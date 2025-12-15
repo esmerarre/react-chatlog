@@ -7,11 +7,13 @@ const ChatLog = (props) => {
   const getChatEntries = (entries) => {
     return entries.map((entry) => {
       return (<ChatEntry
+        key= {entry.id}
         id={entry.id}
         sender={entry.sender}
         body={entry.body}
         timeStamp={entry.timeStamp}
-        liked={entry.liked}>
+        liked={entry.liked}
+        onLike={props.onLikeEntry}>
       </ChatEntry>
       );
     });
@@ -35,7 +37,7 @@ ChatLog.propTypes = {
       liked: PropTypes.bool.isRequired
     })
   ).isRequired,
-  onLike: PropTypes.func.isRequired
+  onLikeEntry: PropTypes.func.isRequired
 };
 
 
