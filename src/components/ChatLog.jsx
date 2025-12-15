@@ -40,5 +40,4 @@ ChatLog.propTypes = {
   onLikeEntry: PropTypes.func.isRequired
 };
 
-
 export default ChatLog;

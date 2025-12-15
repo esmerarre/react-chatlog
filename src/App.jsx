@@ -3,7 +3,6 @@ import ChatLog from './components/ChatLog';
 import entriesData from './data/messages.json';
 import { useState } from 'react';
 
-
 const countTotalLikes = entriesData => {
   return entriesData.reduce((acc, entry) => {
     if (!entry.liked) {
@@ -34,8 +33,6 @@ const App = () => {
         <h2>{countTotalLikes(entryData)} ❤️s</h2>
       </header>
       <main>
-        {/* Wave 01: Render one ChatEntry component
-        Wave 02: Render ChatLog component */}
         <ChatLog entries={entryData} onLikeEntry={handleLikes}></ChatLog>
       </main>
     </div>
