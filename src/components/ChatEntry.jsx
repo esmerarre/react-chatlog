@@ -13,9 +13,12 @@ data needed:
 */
 
 const ChatEntry = (props) => {
+
+  const chatDisplay = props.sender === 'Vladimir' ? 'local' : 'remote';
+
   return (
     // Replace the outer tag name with a semantic element that fits our use case
-    <div className="chat-entry local">
+    <div className={`chat-entry ${chatDisplay}`}>
       <h2 className="entry-name">{props.sender}</h2>
       <section className="entry-bubble">
         <p>{props.body}</p>
