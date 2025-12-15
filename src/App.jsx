@@ -1,6 +1,7 @@
 import './App.css';
 import ChatLog from './components/ChatLog';
 import entriesData from './data/messages.json';
+import { useState } from 'react';
 
 
 const countTotalLikes = entriesData => {
